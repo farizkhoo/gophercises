@@ -25,7 +25,7 @@ func main() {
 	}
 	fmt.Printf("Problem #1: %v=?\n", prob[0])
 	s, _ := reader.ReadString('\n')
-	s = strings.TrimSuffix(s, "\r\n")
+	s = strings.TrimSpace(s)
 	go checker(s, prob[1], ch)
 	fmt.Println(<-ch)
 }
